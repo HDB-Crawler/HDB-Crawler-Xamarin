@@ -21,6 +21,7 @@ namespace Skeleton.Droid
     public class FormFragment : AppCompatActivity
     {
         Button buttonSubmit;
+		ViewModel viewModel;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -30,7 +31,7 @@ namespace Skeleton.Droid
             // Create your fragment here
             Android.Support.V7.App.AlertDialog.Builder alert = new Android.Support.V7.App.AlertDialog.Builder(this);
             buttonSubmit = FindViewById<Button>(Resource.Id.buttonSubmit);
-            buttonSubmit.Click += delegate
+			buttonSubmit.Click += async (sender, e) =>
             {
                 //Intent intent = new Intent();
                 /*
@@ -39,7 +40,8 @@ namespace Skeleton.Droid
                     alert.Show();
                 });
                 */
-                
+                viewModel = new ViewModel();
+				Boolean success = await viewModel.SetFeedback("Good");
                 RunOnUiThread(() => {
                     Toast.MakeText(this.ApplicationContext, "Your response has been recorded.",
                         ToastLength.Long).Show();
