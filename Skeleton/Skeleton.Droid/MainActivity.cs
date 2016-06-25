@@ -44,6 +44,7 @@ namespace Skeleton.Droid
             // adapter.AddFragment(new ListViewFragment(), "Listview");
             adapter.AddFragment(new CardViewFragment2(), "Past Events");
             // adapter.AddFragment(new FormFragment(), "Form");
+            adapter.AddFragment(new CardViewFragment3(), "Going");
             viewPager.Adapter = adapter;
         }
 
