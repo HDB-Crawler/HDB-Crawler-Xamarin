@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<monodoc>
+  <node label="Xamarin Components" name="components" parent="libraries" />
+  <node label="PayPal Integrator V5 - Indie Edition" name="nsoftware.InPayPal.Indie" parent="components" />
+  <source provider="ecma" basefile="nsoftware.InPayPal.Indie" path="nsoftware.InPayPal.Indie" />
+</monodoc>

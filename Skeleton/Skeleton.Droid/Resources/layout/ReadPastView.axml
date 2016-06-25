@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardElevation="4dp"
+        card_view:cardUseCompatPadding="true"
+        card_view:cardCornerRadius="5dp">
+    <!-- 3 rows -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+        <!-- row 1 title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#212121"
+                android:text="Caption"
+                android:id="@+id/textViewTitle"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="4dp"
+                android:textStyle="bold" />
+        <!-- row 2 description -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#212121"
+                android:text="Caption"
+                android:id="@+id/textViewDescription"
+                android:layout_marginLeft="4dp" />
+        <!-- row 3 and 4 -->
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:stretchColumns="*"
+                android:rowCount="2"
+                android:columnCount="2">
+            <!-- row 3: date, start time -->
+                <TableRow>
+                <!-- row 3 date -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#727272"
+                        android:text="Caption"
+                        android:id="@+id/textViewDate"
+                        android:layout_marginLeft="4dp" />
+                <!-- row 3 start time -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#727272"
+                        android:text="Caption"
+                        android:id="@+id/textViewTime"
+                        android:layout_marginLeft="4dp" />
+                </TableRow>
+            <!-- row 4: venue, attendees -->
+                <TableRow>
+                <!-- row 4 venue -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#727272"
+                        android:text="Caption"
+                        android:id="@+id/textViewVenue"
+                        android:layout_marginLeft="4dp" />
+                <!-- row 4 attendees -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#212121"
+                        android:text="Caption"
+                        android:id="@+id/textViewAttendees"
+                        android:layout_marginLeft="4dp" />
+                </TableRow>
+                <TableRow>
+                    <Button
+                        android:text="Send Feedback"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/buttonFeedback" />
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</FrameLayout>

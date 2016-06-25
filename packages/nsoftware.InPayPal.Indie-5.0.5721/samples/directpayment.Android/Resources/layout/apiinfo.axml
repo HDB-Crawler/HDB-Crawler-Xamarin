@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout01"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingLeft="5px"
+    android:paddingRight="5px"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/TextView01"
+        android:text="API Configuration"
+        android:textSize="18px"
+        android:layout_width="fill_parent"
+        android:layout_height="50px"
+        android:gravity="center_vertical|center_horizontal" />
+    <TextView
+        android:id="@+id/APIUsername"
+        android:text="API Username: "
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/txtAPIUsername"
+        android:text="xtest1_1199718490_biz_api1.hotmail.com"
+        android:singleLine="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/APIPassword"
+        android:text="API Password: "
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/txtAPIPassword"
+        android:singleLine="true"
+        android:text="1199718508"
+        android:password="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/APISignature"
+        android:text="API Signature: "
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/txtAPISignature"
+        android:singleLine="true"
+        android:text="ArZVhsgMt2Xnh-0gEb7CLza-WEc8Anplrd01chp0nKBXOTWQFcUxhPZX"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:text="Done"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnDone" />
+</LinearLayout>

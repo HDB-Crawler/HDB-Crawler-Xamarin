@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout01"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingLeft="5px"
+    android:paddingRight="5px"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/TextView01"
+        android:text="Card Info"
+        android:height="50px"
+        android:gravity="center_vertical|center_horizontal"
+        android:textSize="18px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout4">
+        <TextView
+            android:id="@+id/CardNumber"
+            android:text="Card Number:"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <EditText
+            android:id="@+id/txtCardNumber"
+            android:text="4832419131427146"
+            android:singleLine="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/ExpDate"
+            android:gravity="center_vertical"
+            android:text="ExpDate [mm/yyyy]: "
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <EditText
+            android:id="@+id/txtExpMonth"
+            android:text="01"
+            android:singleLine="true"
+            android:layout_width="46.7dp"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/Slash"
+            android:text="/"
+            android:textSize="40px"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <EditText
+            android:id="@+id/txtExpYear"
+            android:text="2017"
+            android:singleLine="true"
+            android:layout_width="72.3dp"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout3">
+        <TextView
+            android:id="@+id/CVV"
+            android:gravity="center_vertical"
+            android:text="CVV2: "
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <EditText
+            android:id="@+id/txtCVVData"
+            android:text="123"
+            android:singleLine="true"
+            android:layout_width="76.7dp"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <Button
+        android:text="Done"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnDone" />
+</LinearLayout>

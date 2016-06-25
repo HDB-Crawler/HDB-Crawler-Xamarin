@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<component format="1" id="nsoftware.InPayPal.Indie">
+  <name>PayPal Integrator V5 - Indie Edition</name>
+  <publisher>/n software inc.</publisher>
+  <publisher-url>http://www.nsoftware.com</publisher-url>
+  <version>5.0.5721</version>
+  <summary>PayPal integration components.  Verify customer information, search transactions, make mass payments, issue refunds, process recurring payments, and more!</summary>
+  <samples>
+    <sample id="directpayment.Android">
+      <name>Android Samples:directpayment</name>
+      <summary>Android Samples:directpayment</summary>
+    </sample>
+    <sample id="directpayment.iOS">
+      <name>iOS unified Samples:directpayment</name>
+      <summary>iOS unified Samples:directpayment</summary>
+    </sample>
+  </samples>
+</component>

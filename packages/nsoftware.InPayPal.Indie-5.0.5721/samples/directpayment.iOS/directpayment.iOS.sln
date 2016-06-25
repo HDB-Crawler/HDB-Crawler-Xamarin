@@ -1,0 +1,31 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "directpayment", "directpayment.csproj", "{C32DF703-0455-4E79-A79C-9E1CAE61724D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+		Release|iPhone = Release|iPhone
+		Ad-Hoc|iPhone = Ad-Hoc|iPhone
+		AppStore|iPhone = AppStore|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C32DF703-0455-4E79-A79C-9E1CAE61724D}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
+		{C32DF703-0455-4E79-A79C-9E1CAE61724D}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
+		{C32DF703-0455-4E79-A79C-9E1CAE61724D}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
+		{C32DF703-0455-4E79-A79C-9E1CAE61724D}.AppStore|iPhone.Build.0 = AppStore|iPhone
+		{C32DF703-0455-4E79-A79C-9E1CAE61724D}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{C32DF703-0455-4E79-A79C-9E1CAE61724D}.Debug|iPhone.Build.0 = Debug|iPhone
+		{C32DF703-0455-4E79-A79C-9E1CAE61724D}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{C32DF703-0455-4E79-A79C-9E1CAE61724D}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{C32DF703-0455-4E79-A79C-9E1CAE61724D}.Release|iPhone.ActiveCfg = Release|iPhone
+		{C32DF703-0455-4E79-A79C-9E1CAE61724D}.Release|iPhone.Build.0 = Release|iPhone
+		{C32DF703-0455-4E79-A79C-9E1CAE61724D}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{C32DF703-0455-4E79-A79C-9E1CAE61724D}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = directpayment.csproj
+	EndGlobalSection
+EndGlobal

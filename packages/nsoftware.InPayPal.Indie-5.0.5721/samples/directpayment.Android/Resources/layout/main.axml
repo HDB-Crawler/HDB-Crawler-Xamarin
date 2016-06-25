@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:p1="http://schemas.android.com/apk/res/android"
+    p1:orientation="vertical"
+    p1:minWidth="25px"
+    p1:minHeight="25px"
+    p1:layout_width="match_parent"
+    p1:layout_height="match_parent"
+    p1:id="@+id/linearLayout1">
+    <ScrollView
+        p1:minWidth="25px"
+        p1:minHeight="25px"
+        p1:layout_width="match_parent"
+        p1:layout_height="match_parent"
+        p1:id="@+id/scrollView1">
+        <LinearLayout
+            p1:orientation="vertical"
+            p1:paddingLeft="5px"
+            p1:paddingRight="5px"
+            p1:layout_width="match_parent"
+            p1:layout_height="match_parent"
+            p1:id="@+id/linearLayout8">
+            <TextView
+                p1:text="This demo shows how to use the InPayPal DirectPayment component."
+                p1:layout_width="match_parent"
+                p1:layout_height="wrap_content"
+                p1:id="@+id/textView1" />
+            <LinearLayout
+                p1:orientation="horizontal"
+                p1:minWidth="25px"
+                p1:minHeight="25px"
+                p1:layout_width="match_parent"
+                p1:layout_height="wrap_content"
+                p1:id="@+id/linearLayout1">
+                <TextView
+                    p1:id="@+id/Name"
+                    p1:text="Name:"
+                    p1:gravity="center_vertical"
+                    p1:layout_width="wrap_content"
+                    p1:layout_height="match_parent" />
+                <EditText
+                    p1:layout_width="82.4dp"
+                    p1:layout_height="match_parent"
+                    p1:id="@+id/txtFirstName"
+                    p1:text="John" />
+                <EditText
+                    p1:layout_width="match_parent"
+                    p1:layout_height="match_parent"
+                    p1:id="@+id/txtLastName"
+                    p1:text="Smith" />
+            </LinearLayout>
+            <LinearLayout
+                p1:orientation="horizontal"
+                p1:minWidth="25px"
+                p1:minHeight="25px"
+                p1:layout_width="match_parent"
+                p1:layout_height="wrap_content"
+                p1:id="@+id/linearLayout2">
+                <TextView
+                    p1:text="Address:"
+                    p1:layout_width="wrap_content"
+                    p1:layout_height="match_parent"
+                    p1:id="@+id/textView2"
+                    p1:gravity="center_vertical" />
+                <EditText
+                    p1:layout_width="match_parent"
+                    p1:layout_height="match_parent"
+                    p1:id="@+id/txtAddress"
+                    p1:text="123 Nowhere Ln." />
+            </LinearLayout>
+            <LinearLayout
+                p1:orientation="horizontal"
+                p1:minWidth="25px"
+                p1:minHeight="25px"
+                p1:layout_width="match_parent"
+                p1:layout_height="wrap_content"
+                p1:id="@+id/linearLayout3">
+                <TextView
+                    p1:text="City: "
+                    p1:layout_width="wrap_content"
+                    p1:layout_height="match_parent"
+                    p1:id="@+id/textView3"
+                    p1:gravity="center_vertical" />
+                <EditText
+                    p1:layout_width="match_parent"
+                    p1:layout_height="match_parent"
+                    p1:id="@+id/txtCity"
+                    p1:text="Beverly Hills" />
+            </LinearLayout>
+            <LinearLayout
+                p1:orientation="horizontal"
+                p1:minWidth="25px"
+                p1:minHeight="25px"
+                p1:layout_width="match_parent"
+                p1:layout_height="wrap_content"
+                p1:id="@+id/linearLayout4">
+                <TextView
+                    p1:text="State/Zip: "
+                    p1:layout_width="wrap_content"
+                    p1:layout_height="match_parent"
+                    p1:id="@+id/textView4"
+                    p1:gravity="center_vertical" />
+                <EditText
+                    p1:layout_width="56.2dp"
+                    p1:layout_height="match_parent"
+                    p1:id="@+id/txtState"
+                    p1:text="CA" />
+                <EditText
+                    p1:layout_width="match_parent"
+                    p1:layout_height="match_parent"
+                    p1:id="@+id/txtZip"
+                    p1:text="90210-0000" />
+            </LinearLayout>
+            <LinearLayout
+                p1:orientation="horizontal"
+                p1:minWidth="25px"
+                p1:minHeight="25px"
+                p1:layout_width="match_parent"
+                p1:layout_height="wrap_content"
+                p1:id="@+id/linearLayout5">
+                <TextView
+                    p1:text="IP Address: "
+                    p1:layout_width="wrap_content"
+                    p1:layout_height="match_parent"
+                    p1:id="@+id/textView5"
+                    p1:gravity="center_vertical" />
+                <EditText
+                    p1:layout_width="match_parent"
+                    p1:layout_height="match_parent"
+                    p1:id="@+id/txtIPAddress"
+                    p1:text="10.244.43.106" />
+            </LinearLayout>
+            <LinearLayout
+                p1:orientation="horizontal"
+                p1:minWidth="25px"
+                p1:minHeight="25px"
+                p1:layout_width="match_parent"
+                p1:layout_height="wrap_content"
+                p1:id="@+id/linearLayout6">
+                <TextView
+                    p1:text="Transaction Amount: "
+                    p1:layout_width="wrap_content"
+                    p1:layout_height="match_parent"
+                    p1:id="@+id/textView6"
+                    p1:gravity="center_vertical" />
+                <EditText
+                    p1:layout_width="match_parent"
+                    p1:layout_height="match_parent"
+                    p1:id="@+id/txtAmount"
+                    p1:text="12.88" />
+            </LinearLayout>
+            <LinearLayout
+                p1:orientation="horizontal"
+                p1:minWidth="25px"
+                p1:minHeight="25px"
+                p1:layout_width="match_parent"
+                p1:layout_height="wrap_content"
+                p1:id="@+id/linearLayout7">
+                <TextView
+                    p1:text="Description: "
+                    p1:layout_width="wrap_content"
+                    p1:layout_height="match_parent"
+                    p1:id="@+id/textView7"
+                    p1:gravity="center_vertical" />
+                <EditText
+                    p1:layout_width="match_parent"
+                    p1:layout_height="match_parent"
+                    p1:id="@+id/txtDescription"
+                    p1:text="Test Transaction" />
+            </LinearLayout>
+            <LinearLayout
+                p1:orientation="horizontal"
+                p1:minWidth="25px"
+                p1:minHeight="25px"
+                p1:layout_width="match_parent"
+                p1:layout_height="wrap_content"
+                p1:id="@+id/linearLayout9">
+                <Button
+                    p1:text="Configure"
+                    p1:layout_width="wrap_content"
+                    p1:layout_height="match_parent"
+                    p1:id="@+id/btnConfigure" />
+                <Button
+                    p1:text="Card Info"
+                    p1:layout_width="wrap_content"
+                    p1:layout_height="match_parent"
+                    p1:id="@+id/btnCardInfo" />
+                <Button
+                    p1:text="Authorize"
+                    p1:layout_width="match_parent"
+                    p1:layout_height="match_parent"
+                    p1:id="@+id/btnAuthorize" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
