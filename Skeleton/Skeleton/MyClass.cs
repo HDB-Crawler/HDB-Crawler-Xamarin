@@ -12,15 +12,19 @@ namespace Skeleton
 {
     public class Constants
     {
+        // Replace 192.168.8.106 with the IP of the API server
         private static string BASE_URL = "http://192.168.8.106/HdbEvents/public/";
+
+        // URL for GET activities
         public static string ACTIVITY_URL = BASE_URL + "apiGetActivities";
+        // URL for POST feedback
         public static string FEEDBACK_URL = BASE_URL + "postApiSetFeedback";
+        // URL for POST rsvp (not implemented)
         public static string RSVP_URL = BASE_URL + "apiIncrement"; // increment member count in database. (hardcoded)
     }
 
     public class MyClass
     {
-        // im a fan of meetups and i use meetups. i'm applying the best of meetups (psychology). 
         public MyClass()
         {
         }
@@ -28,8 +32,6 @@ namespace Skeleton
 
     public class Activity
     {
-        //[{"id","created_at", "updated_at","user_id","category","title","venue","date",
-        //    "start_time","end_time","description","members_attending","sentiment"]
         public string id { get; set; }
 
         // Might need
@@ -67,9 +69,10 @@ namespace Skeleton
                 var response = await client.GetStringAsync(Constants.ACTIVITY_URL);
 
                 Debug.WriteLine(response);
-                
+                // Converts JSON to the specified .NET type (i.e. List<Activity>)
                 var items = JsonConvert.DeserializeObject<List<Activity>>(response);
 
+                // Refresh the elements in the ObservableCollection by clearing it and then re-populating it
                 Activities.Clear();
                 foreach (var item in items)
                 {
@@ -78,7 +81,7 @@ namespace Skeleton
                 
                 for (int i = 0; i < Activities.Count; i++)
                 {
-                    Debug.WriteLine("Donation " + i + ":");
+                    Debug.WriteLine("int i: " + i + ":");
                     Debug.WriteLine("id: " + Activities[i].id);
                     Debug.WriteLine("category: " + Activities[i].category);
                     Debug.WriteLine("end_time: " + Activities[i].end_time);
@@ -102,13 +105,8 @@ namespace Skeleton
             try
             {
                 var client = new HttpClient();
+                // RSVP -> increment the number of attendees by 1
                 var response = await client.GetStringAsync(Constants.RSVP_URL);
-
-                // Debug.WriteLine(response);
-
-                // var items = JsonConvert.DeserializeObject<List<Activity>>(response);
-
-
             }
             catch (Exception e)
             {
@@ -124,11 +122,17 @@ namespace Skeleton
             {
                 var client = new HttpClient();
 
+                // public class Message { public string message { get; set; } } was above
                 Message message2 = new Message();
                 message2.message = message;
+
+                // Converts Message instance to JSON
                 var json = JsonConvert.SerializeObject(message2);
+                // Stopped here on 26 June 2016
+                // What is this?
                 var jsonContent = new StringContent(json, Encoding.UTF8, "application/json");
 
+                // Why GET?
                 var response = await client.GetStringAsync(Constants.FEEDBACK_URL);
 
                 Debug.WriteLine(response);
