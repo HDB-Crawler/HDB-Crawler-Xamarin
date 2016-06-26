@@ -50,6 +50,7 @@ namespace Skeleton.Droid
 
             btnRSVP.Click += delegate
             {
+                MainActivity.VALUE = 1;
                 this.Finish();
             };
         }

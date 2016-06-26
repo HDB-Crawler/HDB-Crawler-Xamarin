@@ -87,6 +87,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CardViewFragment3.cs" />
     <Compile Include="LoginActivity.cs" />
     <Compile Include="ReadPastActivity.cs" />
     <Compile Include="CardViewFragment.cs" />
@@ -131,6 +132,9 @@
       <SubType>AndroidResource</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\login.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\GoingLayout.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
   </ItemGroup>

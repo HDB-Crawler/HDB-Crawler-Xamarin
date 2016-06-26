@@ -23,6 +23,7 @@ namespace Skeleton.Droid
 
         ViewModel viewModel;
 
+        System.Timers.Timer t;
         public override async void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -31,6 +32,22 @@ namespace Skeleton.Droid
             Boolean success = await viewModel.GetActivitiesAsync();
             ItemList.item = ConvertActivityToItem(viewModel.Activities);
             mAdapter.NotifyDataSetChanged();
+
+            t = new System.Timers.Timer();
+            t.Interval = 5000;
+            t.Elapsed += new System.Timers.ElapsedEventHandler(t_Elapsed);
+            t.Start();
+        }
+
+        protected async void t_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
+        {
+            t.Stop();
+            await viewModel.GetActivitiesAsync();
+            ItemList.item = ConvertActivityToItem(viewModel.Activities);
+            // mAdapter.NotifyDataSetChanged();
+            // RunOnUiThread(() => mAdapter.NotifyDataSetChanged());
+            Activity.RunOnUiThread(() => mAdapter.NotifyDataSetChanged());
+            t.Start();
         }
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)

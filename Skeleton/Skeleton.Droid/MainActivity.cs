@@ -17,6 +17,7 @@ namespace Skeleton.Droid
     public class MainActivity : AppCompatActivity
     {
         ViewModel viewModel;
+        public static int VALUE = 0;
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -42,9 +43,10 @@ namespace Skeleton.Droid
             // adapter.AddFragment(new FacebookLoginFragment(), "FacebookLogin");
             adapter.AddFragment(new CardViewFragment(), "Upcoming Events");
             // adapter.AddFragment(new ListViewFragment(), "Listview");
+            adapter.AddFragment(new CardViewFragment3(), "Going");
             adapter.AddFragment(new CardViewFragment2(), "Past Events");
             // adapter.AddFragment(new FormFragment(), "Form");
-            adapter.AddFragment(new CardViewFragment3(), "Going");
+            // adapter.AddFragment(new CardViewFragment3(), "Going");
             viewPager.Adapter = adapter;
         }
 

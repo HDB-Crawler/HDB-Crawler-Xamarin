@@ -12,7 +12,7 @@ namespace Skeleton
 {
     public class Constants
     {
-        private static string BASE_URL = "http://192.168.8.112/HdbEvents/public/";
+        private static string BASE_URL = "http://192.168.8.106/HdbEvents/public/";
         public static string ACTIVITY_URL = BASE_URL + "apiGetActivities";
         public static string FEEDBACK_URL = BASE_URL + "postApiSetFeedback";
         public static string RSVP_URL = BASE_URL + "apiIncrement"; // increment member count in database. (hardcoded)

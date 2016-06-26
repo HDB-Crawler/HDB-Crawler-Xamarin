@@ -136,12 +136,24 @@ namespace Skeleton.Droid
 
         public ItemList2()
         {
-            item.Add(new Item2 { title = "Prawning at Hougang",
-                description = "Past Hougang ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                attendees = "20", date = "27 June 2016", time = "12AM", venue = "Punggol Central" });
-            item.Add(new Item2 { title = "One-day trip to KL Park",
-                description = "Past Park ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-                attendees = "100", date = "27 June 2016", time = "1AM", venue = "Punggol Central" });
+            item.Add(new Item2
+            {
+                title = "Walk to Bond @ East Coast Part",
+                description = "A 5km walk in the morning around Route A. Refreshment will be provided. Please contact connect@hdb.gov.sg for any queries.",
+                attendees = "38",
+                date = "27 June 2016",
+                time = "12AM",
+                venue = "East Coast Part"
+            });
+            item.Add(new Item2
+            {
+                title = "Chinese New Year Dinner",
+                description = "Dinner at Punggol Hardcourt. Please contact connect@hdb.gov.sg for any queries.",
+                attendees = "58",
+                date = "27 June 2016",
+                time = "1AM",
+                venue = "Punggol Hardcourt"
+            });
         }
 
         public int NumItems
