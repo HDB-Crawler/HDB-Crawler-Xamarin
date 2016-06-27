@@ -60,12 +60,15 @@ namespace Skeleton
 
     public class ViewModel
     {
+		// Variable that stores the result from calling the web service
         public ObservableCollection<Activity> Activities { get; set; } = new ObservableCollection<Activity>();
+		// Call web service to get activity list
         public async Task<Boolean> GetActivitiesAsync()
         {
             try
             {
                 var client = new HttpClient();
+				// GET request
                 var response = await client.GetStringAsync(Constants.ACTIVITY_URL);
 
                 Debug.WriteLine(response);
@@ -77,20 +80,6 @@ namespace Skeleton
                 foreach (var item in items)
                 {
                     Activities.Add(item);
-                }
-                
-                for (int i = 0; i < Activities.Count; i++)
-                {
-                    Debug.WriteLine("int i: " + i + ":");
-                    Debug.WriteLine("id: " + Activities[i].id);
-                    Debug.WriteLine("category: " + Activities[i].category);
-                    Debug.WriteLine("end_time: " + Activities[i].end_time);
-                    Debug.WriteLine("title: " + Activities[i].title);
-                    Debug.WriteLine("venue: " + Activities[i].venue);
-                    Debug.WriteLine("date: " + Activities[i].date);
-                    Debug.WriteLine("start_time: " + Activities[i].start_time);
-                    Debug.WriteLine("description: " + Activities[i].description);
-                    Debug.WriteLine("members_attending: " + Activities[i].members_attending);
                 }
             }
             catch (Exception e)
@@ -129,15 +118,19 @@ namespace Skeleton
                 // Converts Message instance to JSON
                 var json = JsonConvert.SerializeObject(message2);
                 // Stopped here on 26 June 2016
-                // What is this?
+                // Convert JSON format to string to send to the server
                 var jsonContent = new StringContent(json, Encoding.UTF8, "application/json");
-
+				
                 // Why GET?
-                var response = await client.GetStringAsync(Constants.FEEDBACK_URL);
+                // var response = await client.GetStringAsync(Constants.FEEDBACK_URL);
+				// TODO: Test this web service
+				var response = await client.PostAsync(Constants.FEEDBACK_URL, jsonContent);
+				var responseContent = response.Content;
+				var result = await responseContent.ReadAsStringAsync();
 
                 Debug.WriteLine(response);
 
-                var items = JsonConvert.DeserializeObject<List<Activity>>(response);
+                var items = JsonConvert.DeserializeObject<List<Activity>>(result);
                 
             }
             catch (Exception e)
